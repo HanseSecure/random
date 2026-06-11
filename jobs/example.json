@@ -1,0 +1,89 @@
+{
+  "project": {
+    "name": "Example Security Assessment",
+    "customer": "Example GmbH",
+    "date": "2026-06-11"
+  },
+  "findings": [
+    {
+      "id": "F-001",
+      "title": "Unverschluesselte Administrationsoberflaeche",
+      "component": "Firewall Management",
+      "severity": "high",
+      "status": "open",
+      "owner": "IT Operations",
+      "description": "Die Administrationsoberflaeche ist ueber HTTP erreichbar. Dadurch koennen Zugangsdaten und Sitzungsinformationen unverschluesselt uebertragen werden.",
+      "recommendation": "HTTPS erzwingen, HTTP deaktivieren und ein gueltiges TLS-Zertifikat verwenden."
+    },
+    {
+      "id": "F-002",
+      "title": "Veraltete Softwareversion",
+      "component": "Public Webserver",
+      "severity": "medium",
+      "status": "in_progress",
+      "owner": "Application Team",
+      "description": "Auf dem Webserver wird eine veraltete Softwareversion eingesetzt, fuer die bereits Sicherheitsupdates verfuegbar sind.",
+      "recommendation": "Die eingesetzte Software auf eine unterstuetzte Version aktualisieren und regelmaessige Patch-Zyklen etablieren."
+    },
+    {
+      "id": "F-003",
+      "title": "Kritische Schwachstelle in VPN-Komponente",
+      "component": "Remote Access VPN",
+      "severity": "critical",
+      "status": "open",
+      "owner": "Infrastructure Team",
+      "description": "Fuer die eingesetzte VPN-Komponente ist eine kritische Schwachstelle bekannt. Ein erfolgreicher Angriff kann zu unautorisiertem Zugriff auf interne Systeme fuehren.",
+      "recommendation": "Herstellerpatch kurzfristig einspielen, exponierte Dienste pruefen und Logs auf Hinweise einer Ausnutzung analysieren."
+    },
+    {
+      "id": "F-004",
+      "title": "Fehlende Multi-Faktor-Authentifizierung",
+      "component": "Microsoft 365 Admin Portal",
+      "severity": "high",
+      "status": "accepted",
+      "owner": "Identity Team",
+      "description": "Fuer administrative Benutzerkonten ist keine Multi-Faktor-Authentifizierung verpflichtend aktiviert.",
+      "recommendation": "Multi-Faktor-Authentifizierung fuer alle administrativen Konten verpflichtend aktivieren und Ausnahmen regelmaessig ueberpruefen."
+    },
+    {
+      "id": "F-005",
+      "title": "Offene Informationsseite mit Systemdetails",
+      "component": "Internal Documentation Portal",
+      "severity": "low",
+      "status": "resolved",
+      "owner": "Service Desk",
+      "description": "Eine interne Informationsseite enthaelt technische Details zu Servernamen, Softwarestaenden und Ansprechpartnern.",
+      "recommendation": "Zugriff auf interne Zielgruppen beschraenken und technische Details nur nach dem Need-to-know-Prinzip veroeffentlichen."
+    },
+    {
+      "id": "F-006",
+      "title": "Fehlende zentrale Protokollierung",
+      "component": "Linux Server Fleet",
+      "severity": "medium",
+      "status": "open",
+      "owner": "Platform Team",
+      "description": "Mehrere Linux-Systeme senden keine sicherheitsrelevanten Logs an die zentrale Logplattform.",
+      "recommendation": "Zentrale Protokollweiterleitung aktivieren und sicherstellen, dass Authentifizierungs- und Systemereignisse erfasst werden."
+    },
+    {
+      "id": "F-007",
+      "title": "Nicht dokumentierter Dienstleisterzugang",
+      "component": "Support VPN",
+      "severity": "medium",
+      "status": "in_progress",
+      "owner": "Vendor Management",
+      "description": "Ein aktiver Dienstleisterzugang ist technisch vorhanden, aber nicht vollstaendig in der Zugriffsuebersicht dokumentiert.",
+      "recommendation": "Zugang dokumentieren, fachliche Freigabe nachholen und regelmaessige Rezertifizierung von Dienstleisterzugaengen etablieren."
+    },
+    {
+      "id": "F-008",
+      "title": "Fehlende Security Header",
+      "component": "Customer Portal",
+      "severity": "info",
+      "status": "open",
+      "owner": "Web Development",
+      "description": "Das Webportal setzt nicht alle empfohlenen HTTP Security Header. Das Risiko ist im aktuellen Kontext begrenzt, sollte aber im Rahmen der Haertung beruecksichtigt werden.",
+      "recommendation": "Geeignete Security Header wie Content-Security-Policy, X-Content-Type-Options und Referrer-Policy pruefen und ergaenzen."
+    }
+  ]
+}
