@@ -1,26 +1,34 @@
 {
   "policies": {
     "AppAutoUpdate": true,
+
+    "WindowsSSO": true,
     "MicrosoftEntraSSO": true,
+
     "DisableFirefoxStudies": true,
     "DisableTelemetry": true,
     "DisableFormHistory": true,
+
     "PasswordManagerEnabled": false,
     "OfferToSaveLogins": false,
     "AutofillCreditCardEnabled": false,
     "AutofillAddressEnabled": false,
+
     "DNSOverHTTPS": {
       "Enabled": false,
       "Locked": true
     },
+
     "ExtensionSettings": {
       "*": {
         "installation_mode": "blocked"
       },
+
       "{446900e4-71c2-419f-a6a7-df9c091e268b}": {
         "installation_mode": "force_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi"
       },
+
       "@testpilot-containers": {
         "installation_mode": "force_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/latest.xpi"
