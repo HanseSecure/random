@@ -1,6 +1,7 @@
 {
   "policies": {
     "AppAutoUpdate": true,
+    "MicrosoftEntraSSO": true,
     "DisableFirefoxStudies": true,
     "DisableTelemetry": true,
     "DisableFormHistory": true,
